@@ -1,0 +1,34 @@
+ <ion-content cache-view="false" style="background:#f7f7f7;">
+      <center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center>
+
+
+   <div class="" style="padding:10px;">
+       
+       <img src="img/blogo.png" class="login_img"/>
+     
+      <div style="padding:20px;background: #fff;">
+      <p class="sign_c">Create an Account</p>
+      
+       <p class="we_vom1">Enter Name</p>
+       <input type="text" class="as_input" placeholder="" required  ng-model="signup.user_name">
+       
+      <p class="we_vom1">Email ID </p>
+       <input type="text" class="as_input" placeholder="" required  ng-model="signup.email">
+       
+         <p class="we_vom1"> Mobile Number</p>
+       <input type="number" class="as_input" placeholder="" required  ng-model="signup.mobile">
+      
+      <p class="we_vom1">Password</p>
+        <input type="password" class="as_input" placeholder="" required ng-model="signup.password">    
+
+ <p class="we_vom1" style="margin-bottom: 10px;"> Address </p>
+<input type="text"  placeholder="" class="as_input"  ng-model="signup.addreess"  id="autocompletefrom">
+ 			
+                
+	<!--	<p class="we_vom2"> Forgot Password ? </p>-->
+         <button class="button be_btm" type="button" on-tap="create()">Register Now</button>            
+      </div>
+    
+    <a href="#/login">	<p class="we_vom3"> Already have an account? <span>Sign In</span> </p> </a>
+      </div>
+   </ion-content>

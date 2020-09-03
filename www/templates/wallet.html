@@ -1,0 +1,53 @@
+<ion-view hide-back-button="true" view-title="Wallet">
+<ion-nav-buttons side="close">
+         <a href="#/app/home">
+        <button class="button button-icon button-clear" style="margin-top:5px;margin-right: 8px;">  <!--ng-click="logout()"-->
+       
+        <img src="img/back-btn.png"  style="width: 15px;height: 23px;margin-top: 3px;">
+   
+       </button>
+       
+           </a>
+ 
+      </ion-nav-buttons>
+      
+     
+       
+    <ion-content>
+    
+        <center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center> 
+    
+     <div class="bas_eoijusf25tg">
+     
+     </div>
+    <div class="bva_diifsujgfa25df">
+    <p class="wlat_co"> My Wallet Balance </p>
+    
+    <p class="wlat_cprio"> INR {{balance}}.00 </p></div>
+    
+    <div class="card cor_clsa_poi0" ng-repeat="item in walletreport" style="padding:0px;">
+   <a href="#/app/walletdetails/{{item.ref_id}}">
+   
+    <div class="row">
+    <div class="col col-60">
+     <p class="font-asjdujhfg"> Order Id :<span class="cls_poieiuwutwr"> {{item.ref_id}}</span> </p>
+     <p class="font-asjdujhfg">Amount : <span class="cls_poieiuwutwr">INR {{item.amount}}</span></p>
+    </div>
+     <div class="col col-40">
+     <p class="font-asjdujhfg2"> Status : <span class="cls_poieiuwutwr">{{item.book_status}}</span> </p>
+      
+    </div>
+    </div>
+    <p class="texthsamkdfkkfg5" style="text-align:left;">  Date & Time  : {{item.created_datetime  | date :  "d.M.yy" }}  </p>
+     <p class="texthsamkdfkkfg5"> Mode  : <span ng-if="item.mode=='credit'" style="color:green;">{{item.mode}}</span> </p>
+     
+          
+          </a>
+    </div>
+    
+    
+    </ion-content> 
+    
+    
+</ion-view>
+

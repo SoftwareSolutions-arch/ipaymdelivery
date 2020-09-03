@@ -1,0 +1,52 @@
+
+<ion-side-menus enable-menu-with-back-views="false">
+  <ion-side-menu-content>
+   <div class="overlay-bg"></div>
+   
+   <ion-nav-bar class="bar-stable">
+      <ion-nav-back-button class="button button-icon button-clear back_btn">
+       <!--    <img src="img/back-btn.png" />-->
+        <img src="img/back-btn.png" class="bk" />
+      </ion-nav-back-button>
+
+  <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left"></button>
+      </ion-nav-buttons>
+     <!-- <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear menu_icon" ng-click="goto('/app/home')">
+            <i class="ion-home"></i>
+        </button>
+       <!-- <img src="img/back-btn.png" class="bk" />-->
+      <!--</ion-nav-buttons-->
+    </ion-nav-bar>
+    <ion-nav-view name="menuContent"></ion-nav-view>
+  </ion-side-menu-content>
+  <ion-side-menu side="left">
+   <ion-header-bar style="height:55px;background:#02b5ed;display:block;border-bottom: 1px solid #fff;" class="bar-stable">
+       
+      <!-- <img src="img/bgg1.png" style="width:50px;margin-left:10px;margin-bottom:10px;float:left;"/>-->
+
+       <p class="wel_menname"> CLICKGO <span> DELIVERY </span> </p>
+         
+ 
+  
+       
+    </ion-header-bar>
+    <ion-content style="background: url(../img/bgsm.png)no-repeat !important;background-size: cover;">
+      <ion-list>
+     
+     
+ <ion-item menu-close href="#/app/category" class="hmcll2 ionborder">
+            <img src="img/home.png" class="hmcll1"/></i>
+             <span class="hmcll">  Dashboard </span>
+        </ion-item>
+        
+         <ion-item menu-close ng-click="logout()" href="" class="hmcll2 ionborder">
+          <img src="img/logoutt.png" class="hmcll1"/>
+          <span class="hmcll"> SIGN OUT</span>
+        </ion-item>
+       
+      </ion-list>
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>

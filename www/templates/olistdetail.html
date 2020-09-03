@@ -1,0 +1,113 @@
+	<ion-view hide-back-button="true" view-title="">
+<ion-nav-buttons side="left">
+        <button class="button button-icon button-clear" ng-click="logout()" style="margin-top:5px;margin-right: 8px;">
+        <img src="img/logout.png"  style="width: 28px;height: 28px;margin-top: 2px;">
+       </button>
+       
+       <div class="item item-input-inset b_order"> 
+<label class="item-input-wrapper" style="background: none;margin-left:0px;"> <!--<img src="img/blogo.png" class="logo_bon"/>-->
+ <input type="text" placeholder="Search by name for order number" ng-model="searchData.shipping_address.firstname" style="width:100%;"> 
+ <img src="img/search_A3_Rectangle_15_pattern.png" id="input_img" style="position: absolute; bottom: 7px; right:5px; width:20px; height:20px;">
+ </label> 
+
+ </div> 
+ 
+      </ion-nav-buttons>
+      
+     
+
+  <ion-content style="margin-bottom:50px;">
+ <center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center> 
+      
+     
+      <!--
+  	<ion-tabs class="tabs-positive tabs-icon-tops toppS1 tabs-bottom tabs-standard ssz">
+ 
+  <ion-tab title="Details" class="fsize as_fx" ng-model="cabs.travel_type" value="1">-->
+  
+  <div class="row paddingzero" style="background: #f7f7f7;">
+      <p class="as_fx">Details <span><img src="img/backbt.png" class="bak_bt" back></span></p>
+</div>
+<p class="os_ih">ORDER ID - <span>{{deliverylist.order_id}}</span></p>
+
+ 			 <div  class="ttt" style="overflow: inherit;">				 
+   <div class="list recapp"  style="margin-bottom:0;padding-top: 0;">
+     <div class="" style="border-bottom: 1px solid #eeeeee;">
+         <div class="row">
+             <div class="col col-33">
+               <p>Customer info</p>
+             </div> 
+            <div class="col col-67">
+                <p> {{deliverylist.firstname}} <br>{{deliverylist.address1}} {{deliverylist.address2}}  
+                <br> {{deliverylist.email}} 
+                <br><span style="color: #8cd0f1;font-size: 12px;"> {{deliverylist.phone}} </span>    </p>
+           </div> 
+          </div> 
+           <div class="row">
+                <div class="col col-33">
+                   <p>Payment Type</p>
+               </div> 
+              <div class="col col-67">
+                   <p class="margn_bm">{{deliverylist.payment_type}} </p>
+              </div> 
+          </div>
+      </div>  
+ 
+      <div class="row" style="border-bottom: 1px solid #eeeeee;margin-top: 10px;">
+            <div class="col col-33">
+           <p>Vendor info</p>
+           </div> 
+            <div class="col col-67">
+            <p class="margn_bm">{{vendorinf.company}} </p>
+            <p class="margn_bm">{{vendorinf.store_street}} , {{vendorinf.store_city}}</p>
+             <p class="margn_bm">{{vendorinf.store_district}} , {{vendorinf.store_country}}</p>
+            <p class="margn_bm">{{vendorinf.store_phone}} </p>
+            <p class="margn_bm">{{vendorinf.store_email}} </p>
+           </div> 
+           
+      </div>
+      
+    <div class="row" style="margin-top: 10px;">
+           <div class="col col-33">
+           <p>Order details</p>
+           </div> 
+            <div class="col col-67" style="">
+            <img src="{{prodt.image}}" style="width:48px;float:left;margin: -6px 5px 0px 0px;">
+             <p class="margn_bm"> {{prodt.name}} </p>
+             <p class="margn_bm"><span class="qny_ty">Quantity </span><span>:</span><span class="fl_tright">{{prodt.qty}} </span></p>
+             <p class="margn_bm"><span class="qny_ty"> Total</span> <span>:</span> <span class="su_florr"> {{prodt.subtotal}}</span> </p>
+           </div> 
+      </div>
+
+   
+   
+   </div>
+   
+  
+                
+              
+        
+   </div>
+   
+   
+ 
+
+</ion-content>
+<div class="tabs tabs-icon-top hide-on-keyboard-open" style="background: #fff;height: 45px;border-top:0px solid #f3f7f8;">
+         
+    <!--  ng-click="acceptfn(order_id.order_id)"--> <!--href="#/app/acceptconfirm/{{order_id.order_id}}"-->
+        <a class="tab-item rechargehm" ng-click="acceptfn(order_id.order_id)" style="line-height: 11px;opacity:1;background: #2ac400;border-right: 1px solid #fff;max-width: 100% !important;" >
+           <span class="Home_bott" style="color:#fff;line-height: 4;font-size: 12px;">Accepted </span>
+          </a>
+          
+          <!-- -->
+        <a class="tab-item rechargehm" ng-click="rejectfn(order_id.order_id)"  style="line-height: 11px;opacity:1;background: #da251c;max-width: 100% !important;">
+             <span class="Home_bott" style="color:#fff;line-height: 4;font-size: 12px;">Rejected</span>
+          </a>
+  
+      </div>
+
+</ion-view>
+
+
+

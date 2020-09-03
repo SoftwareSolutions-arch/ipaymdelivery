@@ -1,0 +1,88 @@
+
+
+	<ion-view view-title="">
+     <ion-content>
+     
+<center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center> 
+      
+  
+   <div style="margin:15px;">
+   
+   <div class="row paddingzero" style="margin-bottom:10px" >
+        <select ng-model="rejet.reject_reason" class="as_swel">
+        <option ng-app="" ng-init="rejet.reject_reason='Rejected Reason'"> Rejected Reason </option>
+        <option data-ng-repeat="c in deliveryreasonlist" value="{{c.reason}}"> {{c.reason}} </option>
+        </select>
+  </div>
+  
+
+   <textarea placeholder="Comment" style="width:100%;height:80px;border: 1px solid #ccc;padding: 5px;" ng-model="rejet.comments">  </textarea>
+    
+
+        
+		 
+        <button class="button be_btm" type="button" ng-click="rejected()"  style="line-height: 11px;opacity:1;background: #da251c;width: 100% !important;margin-right: 0;margin-left: 0;"> Save </button>
+        
+          </div>
+ 
+ 
+
+     </ion-content>
+ 	</ion-view>
+ 
+   <style>
+         .popup-container .popup {
+  width: 340px;
+    max-width: 100%;
+     max-height:40%;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    /* padding: 5px; */
+    height: 60%;
+    border: 0px solid #0199e2;
+    border-radius: 20px;
+}
+.popup-container .popup {
+    width: 340px;
+    max-width: 100%;
+    border-radius: 0px;
+    background-color: rgba(255, 255, 255, 0.9);
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-direction: normal;
+    -webkit-box-orient: vertical;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    padding: 5px;
+    height: 220px;
+    border: 0px solid #0199e2;
+    border-radius: 20px;
+    max-height: 220px;
+    min-height: 220px;
+}
+/*.spinns {
+    background: rgba(255, 255, 255, 0);
+}*/
+.has-header {
+    top: 0px;
+}
+
+</style>

@@ -1,0 +1,49 @@
+<ion-view hide-back-button="true" view-title="Edit profile">
+<ion-nav-buttons side="left">
+<a href="#/app/profile">
+        <button class="button button-icon button-clear"  style="margin-top:5px;margin-right: 8px;">
+        <img src="img/back-btn.png"  style="width: 15px;height: 23px;margin-top: 3px;">
+       </button>
+       </a>
+    
+      </ion-nav-buttons>
+      
+     
+       
+    <ion-content style="margin-bottom: 55px;">
+    
+        <center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center> 
+    
+     <div style="padding:20px;background: #fff;">
+    
+      
+       <p class="we_vom1">Enter Name</p>
+       <input type="text" class="as_input" placeholder="" required  ng-model="loginData.username">
+       
+      <p class="we_vom1">Email ID </p>
+       <input type="text" class="as_input" placeholder="" required  ng-model="loginData.username">
+      
+       <p class="we_vom1">Mobile Number</p>
+       <input type="text" class="as_input" placeholder="" required  ng-model="loginData.username">
+      
+      <p class="we_vom1">Password</p>
+        <input type="Enter Your password" class="as_input" placeholder="" required ng-model="loginData.password">    
+
+	<!--	<p class="we_vom2"> Forgot Password ? </p>-->
+         <button class="button be_btm" type="button" on-tap="login(loginData.username,loginData.password,loginData.pin)">Update</button>            
+      </div>
+     
+    
+    
+    
+         
+    
+    
+    
+    
+    </ion-content> 
+    
+   
+  
+</ion-view>
+

@@ -1,0 +1,15 @@
+{
+  "name": "CRICKETSOCIAL",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic1",
+  "hooks": {},
+  "watchPatterns": [
+    "scss/**/*",
+    "www/**/*",
+    "!www/lib/**/*",
+    "!www/**/*.map"
+  ],
+  "id": "eb5b38cf"
+}

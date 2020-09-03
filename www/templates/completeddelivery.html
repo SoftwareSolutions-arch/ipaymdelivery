@@ -1,0 +1,189 @@
+<ion-view hide-back-button="true" view-title="Completed Delivery">
+<ion-nav-buttons side="close">
+<a href="#/app/home">
+        <button class="button button-icon button-clear"style="margin-top:5px;margin-right: 8px;">
+        <img src="img/back-btn.png"  style="width: 15px;height: 23px;margin-top: 3px;">
+       </button>
+       
+          </a> 
+ 
+      </ion-nav-buttons>
+      
+     
+       
+    <ion-content>
+    
+        <center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center> 
+        <ion-tabs slide-tabs-scrollable="true"  show-pager="false" class="tabs-positive tabs-icon-tops toppS1 tabs-bottom tabs-standard ssz" >
+           
+            <ion-tab title="Waiter " class="fsize" value="1">
+
+      
+ 			 <div  class="ttt" style="overflow: inherit;">				 
+   <div class="list recapp"  style="margin-top:37px; margin-bottom:0;">
+           
+      <div class="bot-bors" ng-show="hiderw">
+          <div class="item" >
+              <center><h1 class="norecrfound" style="font-size: 18px;">No records found!</h1></center>
+          </div>
+        </div>
+        
+        
+    <div class="card pick_hc" ng-repeat="item in deliverylist"  ng-show="hiderrw">
+       <div class="row">
+       <div class="col col-10">
+     	<img src="img/ic13.png" class="pick_h">
+       </div>
+        <div class="col col-90">
+        <p class="pick_h1"> Pick Up<span class="pick_h2"> {{item.created_date}}  </span> </p> 
+        <p class="pick_h3"> {{item.store_address}} </p>
+       </div>
+       </div>
+       
+         <div class="row" style="margin-top: 15px;">
+       <div class="col col-10">
+     	<img src="img/ic13.png" class="pick_h">
+       </div>
+        <div class="col col-90">
+        <p class="pick_h1">Drop Off </p> 
+        <p class="pick_h3"> {{item.delievry_address}} </p>
+        <a href="#/app/acceptdeliverydetais/{{item.Order_ID}}"> <p class="pick_h4"> View Order Details  <span> <img src="img/check.png" class="pick_h5 Checkimg"> </span> </p> </a>
+       </div>
+       </div>
+       
+       <!--<div class="row paddingzero">
+        <div class="col col-50 paddingzero">
+         <button class="button be_btm" type="button" on-tap="skip()" style="margin: 0px auto 10px;">Accept</button>    
+        </div>
+         <div class="col col-50 paddingzero">
+          <button class="button be_btm" type="button" on-tap="skip()" style="margin: 0px auto 10px;">Decline</button>    
+        </div>
+       </div>-->
+       
+       
+       </div>
+
+       
+     </div>
+     </div>
+      </ion-tab>
+      
+      
+      
+      
+      <ion-tab title="Shopping" class="fsize" value="1">
+      
+ 			 <div  class="ttt" style="overflow: inherit;">				 
+   <div class="list recapp"  style="margin-top:37px; margin-bottom:0;">
+           
+                 <div class="bot-bors" ng-show="hider">
+          <div class="item" >
+              <center><h1 class="norecrfound" style="font-size: 18px;">No records found!</h1></center>
+          </div>
+        </div>
+        
+        
+        
+           <div class="card pick_hc" ng-repeat="item in deliveryshoplist"  ng-show="hiderr">
+             <p class="detpick_h delevery125">Order ID:{{item.order_id}}</p>
+       <div class="row">
+       <div class="col col-10">
+     	<img src="img/ic13.png" class="pick_h">
+       </div>
+        <div class="col col-90">
+        <p class="pick_h1"> Shipping Address<span class="pick_h2"> {{item.created_datetime}}  </span> </p> 
+        
+        <p class="pick_h3">{{item.shipping_address.firstname}}</p>
+        <p class="pick_h3">{{item.shipping_address.address1}}</p>
+        <p class="pick_h3">{{item.shipping_address.address2}}</p>
+        <p class="pick_h3">{{item.shipping_address.zip}}</p>
+       </div>
+       </div>
+       
+       
+         <a href="#/app/shoppingorderdet/{{item.order_id}}"> <p class="pick_h4" style="padding: 0px 10px 5px;"> View Order Details  <span> <img src="img/check.png" class="pick_h5 Checkimg"> </span> </p> </a>
+       
+       
+       </div>  
+       
+       
+    
+
+        
+       
+     </div>
+     </div>
+  
+      </ion-tab>
+      
+      <ion-tab title="Personal" class="fsize" value="1">
+
+      
+ 			 <div  class="ttt" style="overflow: inherit;">				 
+   <div class="list recapp"  style="margin-top:37px; margin-bottom:0;">
+           
+      <div class="bot-bors" ng-show="hiderp">
+          <div class="item" >
+              <center><h1 class="norecrfound" style="font-size: 18px;">No records found!</h1></center>
+          </div>
+        </div>
+        
+        
+    <div class="card pick_hc" ng-repeat="item in deliverypersonallist"  ng-show="hiderrp">
+       <p class="clo_1426adsffg">{{item.created_date}}</p>
+       
+       
+         <div class="row" style="margin-top: 15px;">
+       
+        <div class="col col-100">
+       
+         <p class="pick_h3 coliusdC_155f">Order ID: <span class="span_pioasifjd5">{{item.Order_ID}}</span> </p>
+         <p class="pick_h3 coliusdC_155f">Address: <span class="span_pioasifjd5">{{item.delievry_address}}</span> </p>
+     <p class="pick_h3 coliusdC_155f">Payment Status : <span class="span_pioasifjd5" style="color: #0260ae;">{{item.status}}</span> </p>
+     <p class="pick_h3 coliusdC_155f">Status : <span class="span_pioasifjd5">{{item.delivery_status}}</span> </p>
+      <p class="pick_h3 coliusdC_155f">Worked Hours : <span class="span_pioasifjd5">{{item.workedHours}}</span> </p>
+       <p class="pick_h3 coliusdC_155f">Amount : <span class="span_pioasifjd5">INR {{item.grand_total}}</span> </p>
+        <!--<a href="#/app/personaldetais/{{item.Order_ID}}"> <p class="pick_h4"> View Order Details  <span> <img src="img/check.png" class="pick_h5 Checkimg"> </span> </p> </a>-->
+       </div>
+       </div>
+       
+       <!--<div class="row paddingzero">
+        <div class="col col-50 paddingzero">
+         <button class="button be_btm" type="button" on-tap="skip()" style="margin: 0px auto 10px;">Accept</button>    
+        </div>
+         <div class="col col-50 paddingzero">
+          <button class="button be_btm" type="button" on-tap="skip()" style="margin: 0px auto 10px;">Decline</button>    
+        </div>
+       </div>-->
+       
+       
+       </div>
+
+       
+     </div>
+     </div>
+      </ion-tab>
+      
+      </ion-tabs>
+        
+      
+         
+       </ion-content> 
+    
+  <!--  
+    <div class="tabs tabs-icon-top hide-on-keyboard-open" style="background: linear-gradient(to right, #63b0e1, #1185c7, #005cab);height: 55px;">
+      
+        <a class="tab-item rechargehm" href="#/app/homecomplete" style="opacity:1;max-width: 180px;border-right: 2px solid #fff;">
+             <span class="Home_bott">Pending Delivery</span>
+          </a>
+          
+          
+          <a class="tab-item rechargehm" href="#/app/homereject" style="opacity:1;max-width: 180px;">
+             <span class="Home_bott">Completed Delivery</span>
+          </a>
+       
+          
+      </div>   -->
+  
+</ion-view>
+

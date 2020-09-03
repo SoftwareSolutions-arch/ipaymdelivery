@@ -1,0 +1,214 @@
+<ion-view hide-back-button="true" view-title="Accepted Delivery">
+<ion-nav-buttons side="close">
+<a href="#/app/home">
+        <button class="button button-icon button-clear"  style="margin-top:5px;margin-right: 8px;"> <!--ng-click="logout()"-->
+        <img src="img/back-btn.png"  style="width: 15px;height: 23px;margin-top: 3px;">
+       </button>
+       
+          
+ </a>
+      </ion-nav-buttons>
+      
+     
+       
+    <ion-content style="">
+    
+        <center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center> 
+    <ion-tabs slide-tabs-scrollable="true"  show-pager="false" class="tabs-positive tabs-icon-tops toppS1 tabs-bottom tabs-standard ssz" >
+           
+            <ion-tab title="Waiter " class="fsize" value="1">
+
+      
+ 			 <div  class="ttt" style="overflow: inherit;">				 
+   <div class="list recapp"  style="margin-top:37px; margin-bottom:0;">
+           
+     <div class="bot-bors" ng-show="hiders">
+          <div class="item" >
+              <center><h1 class="norecrfound" style="font-size: 18px;">No records found!</h1></center>
+          </div>
+        </div>
+         
+       <div class="card pick_hc" ng-repeat="item in deliverylist"  ng-show="hiderrs">
+         <p class="detpick_h delevery125">Order ID:{{item.Order_ID}}  
+         <span> <img src="img/qrcode.png" style="float: right;width: 20px;" ng-click="scanBarcodepay()"> </span>  </p>
+       <div class="row">
+     <!--  <div class="col col-10">
+     	<img src="img/ic13.png" class="pick_h">
+       </div>-->
+        <div class="col col-90">
+  <!--      <p class="pick_h1"> Pick Up<span class="pick_h2"> {{item.created_date}}  </span> </p> -->
+  
+   <p class="pick_h1"> {{item.created_date}}  </p> 
+        <p class="pick_h3"> {{item.store_address}}  </p>
+       </div>
+       </div>
+       
+         <div class="row" style="margin-top: 15px;">
+       <div class="col col-10">
+     	<img src="img/ic13.png" class="pick_h">
+       </div>
+        <div class="col col-90">
+        <p class="pick_h1">Drop Off </p> 
+        <p class="pick_h3"> {{item.delievry_address}} </p>
+          <p class="pick_h3">Payment Status : <span style="font-size:16px;font-weight: bold;color: #005dac;">{{item.status}}</span> </p>
+       </div>
+       </div>
+       
+      <div class="row paddingzero">
+        <div class="col col-50 paddingzero">
+        <a href="#/app/acceptdeliverydetais/{{item.Order_ID}}"> <p class="pick_h4"  style="padding: 10px 0px 0px 20px;"> View Order Details </p> </a>   
+        </div>
+         <div class="col col-60 paddingzero" ng-if="item.status=='Success'">
+<a href="#/app/deliverystatus/{{item.Order_ID}}">   <button class="button be_btm" type="button" on-tap="skip()" style="margin: 0px auto 10px;width: 80%;">Delivery Status</button>    </a> 
+        </div>
+       </div>
+  
+       
+       </div>
+
+       
+     </div>
+     </div>
+      </ion-tab>
+      
+      
+      
+      
+      <ion-tab title="Shopping" class="fsize" value="1">
+      
+ 			 <div  class="ttt" style="overflow: inherit;">				 
+   <div class="list recapp"  style="margin-top:37px; margin-bottom:0;">
+           
+               <div class="bot-bors" ng-show="hidersp">
+          <div class="item" >
+              <center><h1 class="norecrfound" style="font-size: 18px;">No records found!</h1></center>
+          </div>
+        </div>
+         
+         
+         
+               <div class="card pick_hc"  ng-repeat="item in deliveryshoplist"  ng-show="hiderrsp">
+             <p class="detpick_h delevery125">Order ID:{{item.order_id}}</p>
+       <div class="row">
+       <div class="col col-10">
+     	<img src="img/ic13.png" class="pick_h">
+       </div>
+        <div class="col col-90">
+        <p class="pick_h1"> Shipping Address<span class="pick_h2"> {{item.created_datetime}}  </span> </p> 
+        
+        <p class="pick_h3">{{item.shipping_address.firstname}}</p>
+        <p class="pick_h3">{{item.shipping_address.address1}}</p>
+        <p class="pick_h3">{{item.shipping_address.address2}}</p>
+        <p class="pick_h3">{{item.shipping_address.zip}}</p>
+        
+          <p class="pick_h3">Payment Status : <span style="font-size:16px;font-weight: bold;color: #005dac;">{{item.payment_status[0].status}}</span> </p>
+          
+          
+            
+       </div>
+       </div>
+       
+    
+        
+        <div class="row paddingzero">
+       
+       <div class="col col-50 paddingzero">
+         <a href="#/app/shoppingorderdet/{{item.order_id}}"> <p class="pick_h4" style="padding: 10px 0px 0px 20px;"> View Order Details  </p> </a>
+       </div>
+       
+         <div class="col col-50 paddingzero">
+       <!--  ng-if="item.payment_status[0].status=='paid'"-->
+<a href="#/app/deliverystatusshop/{{item.order_id}}">   <button class="button be_btm" type="button" style="margin: 0px auto 10px;width: 80%;">Delivery Status</button>    </a> 
+
+<!--
+<a href="#/app/deliverystatusshopdue/{{item.order_id}}"  ng-if="item.payment_status[0].status=='due'">   <button class="button be_btm" type="button" style="margin: 0px auto 10px;width: 80%;">Delivery Status</button>    </a> -->
+
+
+        </div>
+       </div>
+       
+     
+       
+       
+       </div>  
+       
+     </div>
+     </div>
+  
+      </ion-tab>
+      
+      
+      
+      
+      
+         
+      <ion-tab title="Personal" class="fsize" value="1">
+      
+ 			 <div  class="ttt" style="overflow: inherit;">				 
+   <div class="list recapp"  style="margin-top:37px; margin-bottom:0;">
+           
+               <div class="bot-bors" ng-show="hider">
+          <div class="item" >
+              <center><h1 class="norecrfound" style="font-size: 18px;">No records found!</h1></center>
+          </div>
+        </div>
+         
+         
+         
+               <div class="card pick_hc"  ng-repeat="item in deliveryperslist"  ng-show="hiderr">
+             <p class="detpick_h delevery125">Order ID:{{item.Order_ID}}</p>
+       <div class="row">
+       <div class="col col-10">
+     	<img src="img/ic13.png" class="pick_h">
+       </div>
+        <div class="col col-90">
+        <p class="pick_h1"> Delivery Address<span class="pick_h2"> {{item.created_datetime}}  </span> </p> 
+        
+        <p class="pick_h3">{{item.delievry_address}}</p>
+        
+          <p class="pick_h3">Payment Status : <span style="font-size:16px;font-weight: bold;color: #005dac;">{{item.status}}</span> </p>
+          
+          
+            
+       </div>
+       </div>
+       
+    
+        
+        <div class="row paddingzero">
+       
+      <!-- <div class="col col-50 paddingzero">
+         <a href="#/app/shoppingorderdet/{{item.order_id}}"> <p class="pick_h4" style="padding: 10px 0px 0px 20px;"> View Order Details  </p> </a>
+       </div>
+       -->
+         <div class="col col-50 paddingzero">
+       <!--  ng-if="item.payment_status[0].status=='paid'"-->
+<a href="#/app/personalviwe/{{item.Order_ID}}">   <button class="button be_btm" type="button" style="margin: 0px auto 10px;width: 80%;">View</button>    </a> 
+
+<!--
+<a href="#/app/deliverystatusshopdue/{{item.order_id}}"  ng-if="item.payment_status[0].status=='due'">   <button class="button be_btm" type="button" style="margin: 0px auto 10px;width: 80%;">Delivery Status</button>    </a> -->
+
+
+        </div>
+       </div>
+       
+     
+       
+       
+       </div>  
+       
+     </div>
+     </div>
+  
+      </ion-tab>
+      
+      
+      
+      </ion-tabs>
+      
+  
+       
+       
+    </ion-content> 
+</ion-view>
+

@@ -1,0 +1,25 @@
+ <ion-content cache-view="false" style="background:#f7f7f7;">
+      <center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center>
+
+
+   <div class="" style="padding:10px;">
+       
+       <img src="img/blogo.png" class="login_img"/>
+      
+       
+      <div style="padding:20px;background: #fff;">
+      <p class="we_vom">Hello</p>
+      <p class="sign_c">Sign in to your Account</p>
+      <p class="we_vom1">User Name</p>
+       <input type="text" class="as_input" placeholder="" required  ng-model="loginData.username">
+      
+      <p class="we_vom1">Password</p>
+        <input type="Enter Your password" class="as_input" placeholder="" required ng-model="loginData.password">    
+
+		<p class="we_vom2"> Forgot Password ? </p>
+         <button class="button be_btm" type="button" on-tap="login(loginData.username,loginData.password)">Sign In</button>     <!--on-tap="skip()"   -->      
+      </div>
+    
+    <a href="#/signup">	<p class="we_vom3"> Don't have an account? <span>Register Now</span> </p> </a>
+      </div>
+   </ion-content>

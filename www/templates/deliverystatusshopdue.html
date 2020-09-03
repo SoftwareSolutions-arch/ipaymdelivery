@@ -1,0 +1,29 @@
+<ion-view hide-back-button="true" view-title="Delivery Status">
+<ion-nav-buttons side="close">
+<a href="#/app/home">
+        <button class="button button-icon button-clear"  style="margin-top:5px;margin-right: 8px;"> <!--ng-click="logout()"-->
+        <img src="img/back-btn.png"  style="width: 15px;height: 23px;margin-top: 3px;">
+       </button>
+       
+          
+ </a>
+      </ion-nav-buttons>
+      
+     
+       
+    <ion-content style="padding:10px;">
+    
+        <center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center> 
+    
+<p> Choose Delivery Status </p>
+        <label class="">
+       <select class="drps_dn" ng-model="deliver_y.del_status">
+       <option value="Order Delivered"> Order Delivered  </option>
+       </select> 
+        </label>
+       
+       <button class="button be_btm disable-user-behavior" type="button" on-tap="deliver_ystatus()">Submit</button>
+       
+    </ion-content> 
+</ion-view>
+

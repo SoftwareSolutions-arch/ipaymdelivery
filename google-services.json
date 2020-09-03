@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "934536033762",
+    "firebase_url": "https://ipaym-3b37e.firebaseio.com",
+    "project_id": "ipaym-3b37e",
+    "storage_bucket": "ipaym-3b37e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:934536033762:android:26df3053f8e6374a1775bb",
+        "android_client_info": {
+          "package_name": "com.alpha.ipay"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "934536033762-alcr63s0iu7ap6ifbttlfa63f2g1scp7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBnrmt4u0BcIc0y1qWtUl6jQc2N8Dthn_k"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "934536033762-alcr63s0iu7ap6ifbttlfa63f2g1scp7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,0 +1,81 @@
+<ion-view hide-back-button="true" view-title="Home">
+  <ion-nav-buttons side="close">
+    <button class="button button-icon button-clear" ng-click="logout()" style="margin-top:5px;margin-right: 8px;">
+      <img src="img/logout.png"  style="width: 28px;height: 28px;margin-top: 2px;">
+    </button>
+
+
+
+  </ion-nav-buttons>
+
+
+
+  <ion-content style="margin-bottom: 55px;">
+
+    <center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center>
+    <div style="margin:10px;margin-top: 0px;">
+
+      <div class="row">
+        <div class="col col-50 cn">
+          <a href="#/app/homecomplete">
+          <img src="img/ic9.png"  class="cnimg">
+          <p class="cn1"> New Orders </p> </a>
+        </div>
+       <!-- <div class="col col-50 cn" ng-click="Mydeliverys()">
+          <img src="img/ic10.png" class="cnimg">
+          <p class="cn1"> Cancel Orders </p>
+        </div>-->
+        <div class="col col-50 cn">
+          <a href="#/app/accepteddelivery">
+          <img src="img/ic10.png" class="cnimg">
+          <p class="cn1"> Accepted Orders </p>
+          </a>
+        </div>
+        
+      </div>
+
+      <div class="row">
+        <div class="col col-50 cn">
+          <a href="#/app/wallet">
+            <img src="img/ic111.png"  class="cnimg">
+            <p class="cn1"> Wallet </p>
+          </a>
+        </div>
+        <div class="col col-50 cn">
+          <a href="#/app/profile">
+            <img src="img/ic12.png" class="cnimg">
+            <p class="cn1"> My Profile </p>
+          </a>
+        </div>
+      </div>
+
+    </div>
+
+
+<div class="col col-50 cn" ng-click="startloop()">
+          <p class="cn1"> Start lat n lon </p>
+        </div>
+		
+		<div class="col col-50 cn" ng-click="stoploop()">
+          <p class="cn1"> Stop lat n long </p>
+        </div>
+		
+  </ion-content>
+
+
+  <div class="tabs tabs-icon-top" style="background: linear-gradient(to right, #63b0e1, #1185c7, #005cab);height: 55px;">
+
+  <!--  <a class="tab-item rechargehm"  href="#/app/accepteddelivery" style="opacity:1;max-width: 180px;border-right: 2px solid #fff;">
+      <span class="Home_bott">Accepted Delivery</span>
+    </a>-->
+
+
+    <a class="tab-item rechargehm"  href="#/app/completeddelivery" style="opacity:1;max-width: 180px;">
+      <span class="Home_bott">Completed Delivery</span>
+    </a>
+
+
+  </div>
+
+</ion-view>
+

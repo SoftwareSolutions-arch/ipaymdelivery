@@ -1,0 +1,115 @@
+	<ion-view hide-back-button="true" view-title="Delivery Details">
+<ion-nav-buttons side="left">
+<a href="#/app/wallet">
+        <button class="button button-icon button-clear"  style="margin-top:5px;margin-right: 8px;">
+        <img src="img/back-btn.png"  style="width: 15px;height: 23px;margin-top: 3px;">
+       </button>
+       </a>
+    
+      </ion-nav-buttons>
+      
+     
+
+  <ion-content>
+ <center> <div ng-show="spin" class="spinns"> <ion-spinner icon="crescent" class="spinner-royal"></ion-spinner> </div> </center> 
+      <div class="card pick_hc"> 
+     
+     <p class="detpick_h">Order ID:{{orderdetalist.Order_ID}}</p>
+     
+     <!-- <div class="row">
+       <div class="col col-10">
+     	<img src="img/ic14.png" class="pick_h imf_djjsf8y">
+       </div>
+        <div class="col col-90">
+        <p class="detpick_h1"> Pickup Address </p> 
+        <p class="detpick_h3"> {{orderdetalist.store_address}}</p>
+       </div>
+       </div>-->
+       
+          <div class="row" style="margin-top: 10px;border-bottom: 1px solid #ddd;">
+       <div class="col col-10">
+     	<img src="img/ic15.png" class="pick_h">
+       </div>
+        <div class="col col-90">
+        <p class="detpick_h1"> Delivery Address </p> 
+        <p class="detpick_h3"> {{orderdetalist.delievry_address}}</p>
+       </div>
+       </div>
+
+
+ <div ng-if="orderdetalist.image">
+<p class="detpick_h"> Product Image :</p>
+
+<div style="height: 150px;"> <img src="{{orderdetalist.image}}" class="pro_imgwtr"  on-error-src="img/dummy.jpg">  </div>
+
+</div>
+
+
+<p class="detpick_h"> Bill Details</p>
+<div class="card card_cljdsf5ddd" ng-repeat="item in orderdetalistprod">
+<div class="row">
+<div class="col col-50">
+<p class="p_tag_textnhjsdf5 text_al_cesfg5">Product Name</p>
+<p class="ow_racr_pkkdf5">{{item.product_id}}</p>
+</div>
+<div class="col col-25">
+<p class="p_tag_textnhjsdf5 text_al_cesfg5">Qty</p>
+<p class="ow_racr_pkkdf5">{{item.product_qty}}</p>
+</div>
+<div class="col col-25">
+<p class="p_tag_textnhjsdf5 text_al_cesfg5">Unit</p>
+<p class="ow_racr_pkkdf5">{{item.measurement}}</p>
+</div>
+</div>
+
+</div>
+
+<!--
+<div class="row" style="padding-right: 21px;">
+<div class="col col-33">
+<p class="p_tag_textnhjsdf5 cls_roldfsf6g" style="font-size:15px;">Total Price:</p>
+</div>
+<div class="col col-67">
+<input type="text" class="as_input imputcllksaf5gh" placeholder=""  ng-model="deliverypri.order_price" style="width: 80%;padding: 0px 5px;height: 31px !important;">
+</div>
+</div>
+ <button class="button be_btm" type="button" on-tap="deliveryprice()">Submit</button>-->
+
+ <div class="row">
+       <div class="col col-60">
+     	<p class="detpick_h4"> Product Price </p>
+       </div>
+        <div class="col col-40">
+        <p class="detpick_h5">Rs.{{orderdetalist.grand_total}} </p> 
+       </div>
+       </div>
+       
+       <div class="row">
+       <div class="col col-60">
+     	<p class="detpick_h4"> Delivery Fee </p>
+       </div>
+        <div class="col col-40">
+        <p class="detpick_h5"> INR {{orderdetalist.delivery_pay}}</p> 
+       </div>
+       </div>
+       
+       <p class="detpick_h6"> This fees goes towards the Delivery Partner fairly </p>
+       
+       
+       <div class="row" style="border: 1px solid #ddd;">
+       <div class="col col-60">
+     	<p class="detpick_h4"> Total Pay </p>
+       </div>
+        <div class="col col-40">
+        <p class="detpick_h5"> INR {{orderdetalist.total_orderPrice}} </p> 
+       </div>
+       </div>
+       
+</div>
+</ion-content>
+
+
+</ion-view>
+
+
+
